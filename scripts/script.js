@@ -1,67 +1,3 @@
-// const initSlider = () => {
-//   const imageList = document.querySelector('.img_list');
-//   const slideButtons = document.querySelectorAll('.slide_button');
-//   const sliderScrollbar = document.querySelector('.slider_scrollbar');
-//   const scrollbarThumb = sliderScrollbar.querySelector('.scrollbar_thumb');
-//   const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-//   let isDragging = false;
-//   let startX, thumbPosition;
-
-//   const buttonWidth = slideButtons[0].offsetWidth; // Assuming both buttons have the same width
-//   const maxThumbPosition =
-//     sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth - buttonWidth * 2; // Subtract the width of both buttons
-
-//   const handleMouseMove = (e) => {
-//     if (!isDragging) return;
-//     const deltaX = e.clientX - startX;
-//     const newThumbPosition = thumbPosition + deltaX;
-//     const boundedPosition = Math.max(
-//       0,
-//       Math.min(maxThumbPosition, newThumbPosition)
-//     );
-//     scrollbarThumb.style.left = `${boundedPosition}px`;
-
-//     const scrollPercentage = boundedPosition / maxThumbPosition;
-//     imageList.scrollLeft = scrollPercentage * maxScrollLeft;
-//   };
-
-//   const handleMouseUp = () => {
-//     isDragging = false;
-//     document.removeEventListener('mousemove', handleMouseMove);
-//     document.removeEventListener('mouseup', handleMouseUp);
-//   };
-
-//   scrollbarThumb.addEventListener('mousedown', (e) => {
-//     isDragging = true;
-//     startX = e.clientX;
-//     thumbPosition = scrollbarThumb.offsetLeft;
-
-//     document.addEventListener('mousemove', handleMouseMove);
-//     document.addEventListener('mouseup', handleMouseUp);
-//   });
-
-//   slideButtons.forEach((button) => {
-//     button.addEventListener('click', () => {
-//       const direction = button.id === 'prev_slide' ? -1 : 1;
-//       const scrollAmount = imageList.clientWidth * direction;
-//       imageList.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-//     });
-//   });
-
-//   const updateScrollThumbPosition = () => {
-//     const scrollPosition = imageList.scrollLeft;
-//     const thumbPosition = (scrollPosition / maxScrollLeft) * maxThumbPosition;
-//     scrollbarThumb.style.left = `${thumbPosition}px`;
-//   };
-
-//   imageList.addEventListener('scroll', () => {
-//     updateScrollThumbPosition();
-//   });
-// };
-
-// window.addEventListener('load', initSlider);
-
 const initSlider = () => {
   const imageList = document.querySelector('.img_list');
   const slideButtons = document.querySelectorAll('.slide_button');
@@ -99,6 +35,7 @@ const initSlider = () => {
   };
 
   scrollbarThumb.addEventListener('mousedown', (e) => {
+    e.preventDefault();
     isDraggingThumb = true;
     startX = e.clientX;
     thumbPosition = scrollbarThumb.offsetLeft;
@@ -122,20 +59,21 @@ const initSlider = () => {
   };
 
   imageList.addEventListener('mousedown', (e) => {
+    e.preventDefault();
     isDraggingSlides = true;
     startX = e.clientX;
     scrollLeft = imageList.scrollLeft;
-    // imageList.style.cursor = 'grabbing';
+    imageList.style.cursor = 'grabbing';
 
     document.addEventListener('mousemove', handleSlideMouseMove);
     document.addEventListener('mouseup', handleSlideMouseUp);
+    document.addEventListener('mouseleave', handleSlideMouseUp);
   });
 
   // Handle scroll wheel for scrolling the image list
   imageList.addEventListener('wheel', (e) => {
     e.preventDefault();
-    const scrollAmount =
-      e.deltaY > 0 ? imageList.clientWidth : -imageList.clientWidth;
+    const scrollAmount = e.deltaY > 0 ? 100 : -100; // Adjust scroll amount as needed
     imageList.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   });
 

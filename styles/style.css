@@ -11,7 +11,6 @@
 html,
 body {
   height: 100%;
-  background-color: black;
 }
 
 main {
@@ -167,28 +166,34 @@ header {
   margin-top: 32px;
   margin-left: 391px;
 }
+.promo_twigs {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 675px;
+  right: 0;
+  gap: 1000px;
+}
 
+.price_twig {
+  position: absolute;
+  z-index: 10;
+  top: 84%;
+  right: 0;
+}
 /* _______________________________________________________ */
 
 .price {
+  width: 100%;
   position: relative;
-  top: -196px;
+  top: -205px;
+  z-index: 2;
   display: flex;
   align-items: center;
   background: url('../assets/logo/background\ prices.svg') center center/cover
     no-repeat;
-}
-.price_twigs {
-  position: relative;
-  z-index: 4;
-  top: 53px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.left_twig {
-  position: relative;
-  right: -100px;
 }
 
 .price_list {
@@ -196,7 +201,7 @@ header {
   flex-direction: column;
   gap: 30px;
   width: 650px;
-  margin-top: 27px;
+  margin-top: 275px;
   margin-bottom: 69px;
 }
 
@@ -211,8 +216,7 @@ header {
   text-align: left;
   color: #5c5956;
 }
-.price_permanent {
-}
+
 .price_list_title {
   margin-bottom: 21px;
   font-family: Montserrat;
@@ -237,29 +241,41 @@ header {
   text-align: left;
   color: #bb8d37;
 }
-.list_permanent {
-}
-.price_camo {
-}
-.title_camo {
-}
-.camo_list {
-}
-.price_tatoo {
-}
-.title_tatoo {
-}
-.tatoo_list {
-}
-.price_delete {
-}
-.price_correction {
-}
 
 /* ______________________SLIDER_________________________________ */
 .slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 246px;
+  z-index: 1;
+  width: 100%;
+  height: 963px;
+  background: url('../assets/our\ works\ background.svg') center center/cover
+    no-repeat;
 }
-.container {
+
+.slider_container {
+  position: relative;
+  top: 275px;
+  max-height: 571px;
+}
+
+.slider_title {
+  background-image: radial-gradient(circle at 18% 51%, #e3d3b6, #bb8d37 78%);
+  font-family: BeatrixAntiqua;
+  font-size: 44px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
 }
 
 .img_list {
@@ -327,7 +343,88 @@ header {
   outline: none;
   background: none;
 }
-.fa-chevron-right {
+/* ________________________________Knowledge - Accordion_____________________________ */
+
+.knowledge {
+  position: relative;
+  top: -246px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: radial-gradient(circle at 51% 98%, #fff, #bbb1b2 203%);
+  padding-bottom: 40px;
+}
+
+.knowledge_title {
+  font-family: BeatrixAntiqua;
+  font-size: 44px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5c5956;
+  margin-bottom: 50px;
+  margin-top: 70px;
+}
+.accordion {
+  max-width: 983px;
+  margin: 0 auto;
+}
+.accordion-flush {
+}
+.accordion-item {
+  background: none;
+}
+.accordion-header {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5c5956;
+  margin-top: 65px;
+}
+.preparation_title {
+}
+.accordion-button {
+  background: none;
+}
+.collapsed {
+}
+.accordion-collapse {
+}
+.collapse {
+}
+.accordion-body {
+}
+.preparation_body {
+}
+.preparation_list {
+}
+.preperetion_item {
+}
+.care_title {
+}
+.care_body {
+}
+.care_list {
+}
+.care_item {
+}
+.contr_title {
+}
+.contr_body {
+}
+.contr_list {
+}
+.contr_item {
 }
 /* __________________________________________________________________ */
 
