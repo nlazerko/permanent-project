@@ -13,7 +13,6 @@ const initSlider = () => {
   const maxThumbPosition =
     sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth - buttonWidth * 2;
 
-  // Handle mouse move for the scrollbar thumb
   const handleThumbMouseMove = (e) => {
     if (!isDraggingThumb) return;
     const deltaX = e.clientX - startX;
@@ -44,7 +43,6 @@ const initSlider = () => {
     document.addEventListener('mouseup', handleThumbMouseUp);
   });
 
-  // Handle mouse dragging for the image list
   const handleSlideMouseMove = (e) => {
     if (!isDraggingSlides) return;
     const deltaX = e.clientX - startX;
@@ -70,10 +68,9 @@ const initSlider = () => {
     document.addEventListener('mouseleave', handleSlideMouseUp);
   });
 
-  // Handle scroll wheel for scrolling the image list
   imageList.addEventListener('wheel', (e) => {
     e.preventDefault();
-    const scrollAmount = e.deltaY > 0 ? 100 : -100; // Adjust scroll amount as needed
+    const scrollAmount = e.deltaY > 0 ? 100 : -100;
     imageList.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   });
 
