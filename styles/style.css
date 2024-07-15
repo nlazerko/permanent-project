@@ -11,6 +11,7 @@
 html,
 body {
   height: 100%;
+  background-color: black;
 }
 
 main {
@@ -206,6 +207,7 @@ header {
 }
 
 .price_title {
+  position: relative;
   font-family: BeatrixAntiqua;
   font-size: 44px;
   font-weight: 300;
@@ -213,8 +215,19 @@ header {
   font-style: normal;
   line-height: 3.07;
   letter-spacing: normal;
-  text-align: left;
+  text-align: center;
   color: #5c5956;
+}
+
+.price_title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 134.9px;
+  height: 2px;
+  background-image: linear-gradient(to right, #f5da8d 35%, #b78e43 85%);
 }
 
 .price_list_title {
@@ -347,6 +360,7 @@ header {
 
 .knowledge {
   position: relative;
+  z-index: 2;
   top: -246px;
   width: 100%;
   display: flex;
@@ -354,7 +368,13 @@ header {
   align-items: center;
   justify-content: center;
   background-image: radial-gradient(circle at 51% 98%, #fff, #bbb1b2 203%);
-  padding-bottom: 40px;
+  padding-bottom: 155px;
+}
+
+.knowledge_rose {
+  position: absolute;
+  right: 0;
+  top: -100px;
 }
 
 .knowledge_title {
@@ -395,36 +415,108 @@ header {
 }
 .accordion-button {
   background: none;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5c5956;
 }
-.collapsed {
+
+.list_title {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
-.accordion-collapse {
+.list_title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -45px;
+  width: 34px;
+  height: 34px;
+  background: url('../assets/marker.svg') center center/cover no-repeat;
 }
-.collapse {
+
+.accordeon_list,
+.care_repeat,
+li {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: -0.16px;
+  text-align: left;
+  color: #535a64;
 }
-.accordion-body {
+
+.care_repeat {
+  margin-bottom: 20px;
 }
-.preparation_body {
+/* ______________________________Certificate_____________________________ */
+.certificate {
+  position: relative;
+  z-index: 3;
+  top: -370px;
+  width: 100%;
+  height: auto;
+  background: url('../assets/background\ certificate.svg') center center/cover
+    no-repeat;
+  padding-top: 151px;
+  padding-bottom: 64px;
 }
-.preparation_list {
+
+.certificate_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
-.preperetion_item {
+.title_certificate {
+  font-family: BeatrixAntiqua;
+  font-size: 44px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5c5956;
 }
-.care_title {
+.img_certificate {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.care_body {
+
+.order_certificate {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #bb8d37;
 }
-.care_list {
-}
-.care_item {
-}
-.contr_title {
-}
-.contr_body {
-}
-.contr_list {
-}
-.contr_item {
+.certificate_phone {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: #bb8d37;
 }
 /* __________________________________________________________________ */
 
