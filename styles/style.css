@@ -11,9 +11,9 @@
 html,
 body {
   height: 100%;
-  background-color: black;
+  max-width: 1644px;
+  /* background-color: black; */
 }
-
 main {
   flex: 1 1 auto;
 }
@@ -26,52 +26,47 @@ header {
   background-color: #e9e6e6;
 }
 
-.navbar {
+.burger-icon,
+.close-icon {
+  width: 35px;
+  height: 35px;
 }
 
-.navbar > .container-fluid {
-  height: 74px;
-  background-color: #000;
-  justify-content: center;
+.d-none {
+  display: none;
 }
 
-.navbar-brand {
-  margin-right: 58px;
-}
-.navbar-toggler {
-}
-.navbar-toggler-icon {
+.container-fluid {
   color: #e9e6e6;
+  background-color: #000;
+  padding-left: 57px;
 }
-.collapse {
-}
+
 .navbar-collapse {
-  display: flex;
-  flex-grow: 0;
+  margin-left: 58px;
 }
+
 .navbar-nav {
-  justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
 }
-.nav-link {
+.navbar-nav .nav-item .nav-link {
   font-family: Manrope;
   font-size: 20px;
   font-weight: 500;
   font-stretch: normal;
+  font-style: normal;
   line-height: 1.2;
   letter-spacing: normal;
   text-align: left;
   color: #e9e6e6;
+  transition: color 0.3s ease;
 }
 
-.nav-link:hover {
+.navbar-nav .nav-item .nav-link:hover {
   color: #bb8d37;
+  border-bottom: 2px solid #bb8d37;
 }
-.nav-link:active {
-  color: #bb8d37;
-}
-
-/* ___________________________________ */
+/* _______________Promo____________________ */
 
 .promo {
   position: relative;
@@ -164,8 +159,9 @@ header {
   color: #5c5956;
 }
 .QR {
-  margin-top: 32px;
-  margin-left: 391px;
+  position: absolute;
+  top: 75%;
+  left: 75%;
 }
 .promo_twigs {
   position: absolute;
@@ -518,8 +514,391 @@ li {
   text-align: left;
   color: #bb8d37;
 }
-/* __________________________________________________________________ */
 
+/* __________________________________reviews____________________________ */
+.reviews {
+  position: relative;
+  background: #535a64;
+  padding: 20px;
+  background: url('../assets/reviews/картинка\ ОТЗЫВЫ.png') center center/cover
+    no-repeat;
+  top: -388px;
+  padding-bottom: 238px;
+}
+.title_reviews {
+  font-family: BeatrixAntiqua;
+  font-size: 44px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5c5956;
+  margin-top: 160px;
+  margin-bottom: 108px;
+}
+
+.left-twig {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  z-index: 2;
+}
+
+.text-reviews {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+
+.carousel-reviews {
+  position: relative;
+  padding: 10px;
+  width: 78%;
+  height: auto;
+  max-width: 698px;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: start;
+}
+
+.phone_wrapper {
+  position: absolute;
+  top: 39%;
+  left: 1.5%;
+  width: 228px;
+  height: 460px;
+}
+
+.carousel-slide {
+  width: 100%;
+  max-width: 263px;
+
+  max-height: 567px;
+  flex: 0 0 30%;
+  margin: 0 10px;
+  opacity: 0.7;
+  transform: scale(0.9);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.carousel-slide.active {
+  transform: scale(1);
+  opacity: 1;
+  /* margin-right: 30px; */
+}
+
+.phone-frame {
+  width: 100%;
+  max-width: 263px;
+
+  max-height: 567px;
+  padding-top: 200%;
+  /* background-color: #fff; */
+  /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); */
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.phone-frame img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* .carousel-controls button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
+} */
+
+/* .carousel-controls button:hover {
+  background-color: #444;
+}
+/* ________________________________ACTION__________________________________ */
+
+.action {
+  top: -50%;
+  position: relative;
+}
+.action_twig {
+}
+.container {
+}
+.action_title {
+  font-family: BeatrixAntiqua;
+  font-size: 44px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5c5956;
+  margin-top: 85px;
+  margin-bottom: 50px;
+}
+.action_pic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+  /* gap: 20px; */
+}
+/* .banner {
+  max-width: 984px;
+  max-height: 670px;
+} */
+.banner {
+  width: 50%;
+  height: auto;
+}
+.action_img {
+  width: 23%;
+  height: auto;
+}
+.golden_face {
+  margin-left: 25%;
+}
+
+/* 
+_________________________________About___________________________________ */
+.about {
+  position: relative;
+  top: -65%;
+}
+
+.about_title {
+  font-family: BeatrixAntiqua;
+  font-size: 44px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5c5956;
+  margin-bottom: 57px;
+}
+.about_us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.about_img {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.about_item {
+  font-family: Montserrat;
+  font-size: 19px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: -0.19px;
+  text-align: left;
+  color: #5c5956;
+  margin-bottom: 15px;
+}
+.about_list {
+  list-style-type: none;
+}
+.about_list::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 135px;
+  height: 2px;
+  background-image: linear-gradient(to right, #f5da8d 35%, #b78e43 85%);
+  left: 52%;
+  top: 15%;
+}
+
+.about_link {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.26;
+  letter-spacing: -0.2px;
+  /* text-align: left; */
+  color: #bb8d37;
+  margin-left: 28px;
+}
+.about_rose {
+  position: absolute;
+  top: 90%;
+  right: 2%;
+}
+/* __________________________________Contact__________________________________ */
+.contact {
+  position: relative;
+  top: -41%;
+}
+
+.instagram {
+  position: relative;
+  left: 45%;
+}
+
+.contact_title {
+  font-family: BeatrixAntiqua;
+  font-size: 44px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center;
+  color: #5c5956;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.contacts_logos {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_content {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 115px;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contacts_input {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.instagram_input {
+  display: none;
+}
+.icon {
+  position: relative;
+  left: 7%;
+}
+
+.viber {
+  position: relative;
+  left: -78%;
+}
+.contact_phone {
+  position: relative;
+  left: 48%;
+}
+
+.input_text {
+  width: 350px;
+  height: 38px;
+  padding-left: 32px;
+  padding: 10px;
+  box-shadow: 0 4px 27px 0 rgba(0, 0, 0, 0.09);
+  background-color: #fff;
+  border-radius: 25px;
+  flex-grow: 0;
+  font-family: Montserrat;
+  font-size: 19px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: -0.19px;
+  text-align: center;
+  color: #5c5956;
+}
+.text_phone {
+  text-align: left;
+  padding-left: 35px;
+}
+.insta {
+  display: flex;
+  justify-content: center;
+}
+
+.inst {
+  display: none;
+}
+.map > iframe {
+  width: 600px;
+  height: auto;
+  min-height: 350px;
+}
+/* _________________________________________________________________________ */
+
+.footer {
+  position: relative;
+  bottom: 30%;
+  background-color: #000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.text {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #e9e6e6;
+}
+.footer_link {
+  position: fixed;
+  bottom: 0;
+  right: 10%;
+  bottom: 3%;
+  z-index: 10;
+}
+
+/* _________________________________________________________________________ */
 @media (max-width: 1401px) {
   .nav-link {
     font-size: 18px;
@@ -536,10 +915,26 @@ li {
 }
 
 @media (max-width: 1317px) {
-  .promo_container {
+  .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+  .navbar-collapse {
+    margin-left: 35px;
   }
 
+  .navbar-nav {
+    gap: 0;
+  }
+  .promo_container {
+  }
+  .promo_twigs {
+    display: none;
+  }
   .promo_descr {
+  }
+  .about_us {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .descr_text {
@@ -609,8 +1004,400 @@ li {
   }
 }
 
+@media (max-width: 1025px) {
+  .navbar > .container-fluid {
+    justify-content: center;
+  }
+  .about_img {
+    display: none;
+  }
+  .about_us {
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: start;
+  }
+  .about_list::before {
+    display: none;
+  }
+  .titles_num {
+    display: none;
+  }
+  .stamp {
+    display: none;
+  }
+  .QR {
+    left: 47%;
+  }
+  .price_list {
+    position: relative;
+    left: -15%;
+  }
+  .scrollbar_track {
+    display: none;
+  }
+  .slider_scrollbar {
+    justify-content: center;
+  }
+  .reviews {
+    padding-bottom: 50px;
+  }
+  .action {
+    top: -50%;
+  }
+  .golden_face {
+    display: none;
+  }
+
+  .contacts_logos {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    left: 0;
+  }
+  .contact_inst {
+    position: relative;
+    top: 50%;
+  }
+  .contact_content {
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  .contacts_input {
+    display: flex;
+    justify-content: center;
+  }
+  .instagram_input {
+    display: none;
+  }
+}
+
 @media (max-width: 992px) {
   .navbar > .container-fluid {
     justify-content: space-between;
   }
+
+  .promo_img {
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+  .promo_container {
+    justify-content: center;
+  }
+
+  .QR {
+    display: none;
+  }
+  .about_us {
+    flex-wrap: wrap;
+  }
+  .img_certificate {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .price_list {
+    left: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .descr_text {
+    width: 100%;
+  }
+  .titles_sub {
+    width: 100%;
+  }
+
+  .reviews {
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-item .nav-link {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 769px) {
+  .container-fluid {
+    padding-left: 25px;
+  }
+  .price {
+    background: url('../assets/price/Rectangle.svg') center center/cover
+      no-repeat;
+  }
+
+  .price_list {
+    /* display: flex;
+    flex-direction: column;
+    gap: 30px; */
+    width: 100%;
+    /* margin-top: 275px; */
+  }
+  .phone_wrapper {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 228px;
+    height: 460px;
+  }
+  .text-reviews {
+    display: none;
+  }
+
+  .reviews {
+    top: -450px;
+  }
+  .title_reviews {
+    margin-top: 80px;
+    margin-bottom: 70px;
+  }
+
+  .carousel_phone {
+    position: relative;
+    left: 32%;
+    top: -79px;
+    width: 200px;
+    height: 519px;
+    overflow: hidden;
+  }
+
+  .carousel-reviews {
+    position: relative;
+    padding: 10px;
+    width: 78%;
+    height: auto;
+    max-width: 698px;
+    overflow: hidden;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    left: -1%;
+    top: 17%;
+  }
+
+  .carousel-slide {
+    width: 263px;
+
+    height: 567px;
+    flex: 0 0 30%;
+    margin: 0 10px;
+    opacity: 0.7;
+    transform: scale(0.9);
+    transition: transform 0.5s, opacity 0.5s;
+  }
+
+  .phone-frame {
+    width: 185px;
+  }
+
+  .carousel-controls {
+    position: relative;
+    top: -60px;
+    gap: 40px;
+
+    margin-top: 0;
+  }
+
+  .action {
+    top: -75%;
+  }
+
+  /* .footer_link {
+    right: 40%;
+  } */
+  .promo_container {
+    flex-wrap: wrap-reverse;
+  }
+
+  .promo_descr {
+    margin-top: 50px;
+  }
+
+  .titles_num {
+    display: flex;
+  }
+
+  .promo_pict {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .map > iframe {
+    width: 1fr;
+    height: auto;
+    min-height: 350px;
+  }
+
+  .img_certificate img,
+  .about_img_hero img,
+  .about_img img {
+    width: 100%;
+  }
+
+  /* .about_us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  } */
+  .about_img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .action_img {
+    display: none;
+  }
+  .action_pic {
+    justify-content: center;
+  }
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+
+  .insta {
+    display: none;
+  }
+
+  .instagram_input {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-controls {
+    left: 7%;
+  }
+  .map > iframe {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+  }
+  .price_twig {
+    display: none;
+  }
+  .footer_link {
+    right: 20%;
+  }
+}
+
+@media (max-width: 451px) {
+  .left-twig {
+    display: none;
+  }
+  .carousel_phone {
+    left: 10%;
+  }
+  .phone_wrapper {
+    left: 8%;
+  }
+  .carousel-controls {
+    left: -7%;
+  }
+  .viber {
+    position: absolute;
+    left: 81%;
+    top: 33%;
+  }
+}
+
+@media (max-width: 426px) {
+  .contact_content {
+    gap: 15px;
+    width: 100%;
+    padding-left: 29px;
+  }
+
+  .input_text {
+    width: 100%;
+    height: auto;
+  }
+  .input_text {
+    width: 250px;
+    height: 43px;
+    padding-left: 0px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .viber {
+    left: 76%;
+    top: 33%;
+  }
+
+  .icon {
+    left: 9%;
+  }
+
+  .contacts_logos {
+    position: relative;
+    left: -41px;
+  }
+  .footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 376px) {
+  .carousel-controls {
+    left: 3%;
+  }
+  .footer_link {
+    right: 10%;
+    top: 91%;
+  }
+}
+
+@media (max-width: 350px) {
+  .carousel_phone {
+    left: -9%;
+  }
+  .phone_wrapper {
+    left: -2px;
+  }
+  .carousel-controls {
+    left: 4%;
+  }
+  .contacts_input {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .carousel_phone {
+    left: 0;
+  }
+  .action_title {
+    font-size: 42px;
+  }
+  /* .icon,
+  .contact_phone,
+  .viber {
+    position: static;
+  }
+  .input_text {
+    position: relative;
+    left: -38px;
+    z-index: -1;
+    width: 200px;
+    height: 53px;
+    padding-left: 0px;
+    font-size: 10px;
+    text-align: center;
+  }
+  .viber {
+    left: 67%;
+    top: 33%;
+  } */
 }

@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet"
@@ -15,12 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+
     <link rel="stylesheet" href="styles/bootstrap-reboot.min.css" />
     <link rel="stylesheet" href="styles/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="styles/style.css" />
@@ -28,39 +31,61 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"
-              ><img src="assets/logo/LOGO.svg" alt=""
-            /></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar"
-                ><img src="assets/logo/burger.svg" alt=""
-              /></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link" href="#">Услуги и цены</a>
-                <a class="nav-link" href="#">Наши работы</a>
-                <a class="nav-link" href="#">Что нужно знать</a>
-                <a class="nav-link" href="#">Сертификаты</a>
-                <a class="nav-link" href="#">Отзывы</a>
-                <a class="nav-link" href="#">О студии</a>
-                <a class="nav-link" href="#">Контакты</a>
-              </div>
-            </div>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="assets/logo/LOGO.svg" alt=""
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <img
+                src="assets/logo/burger.svg"
+                alt="бургер меню"
+                class="burger-icon"
+              />
+              <img
+                src="assets/logo/close.svg"
+                alt="крестик"
+                class="close-icon d-none"
+              />
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#price">Услуги и цены</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#example">Наши работы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#knowledge">Что нужно знать</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#certification">Сертификаты</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#revive">Отзывы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">О студии</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Контакты</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
+      <!-- </div> -->
     </header>
     <section class="promo">
       <div class="container promo_container">
@@ -71,9 +96,14 @@
           <div class="descr_title">
             <div class="titles">
               <div class="titles_num">
-                <a href="" class="number">+375 29 2046 444</a
-                ><a href=""><img src="assets/logo/phone-logo.svg" alt="" /></a
-                ><a href=""><img src="assets/logo/map-logo.svg" alt="" /></a>
+                <a href="tel:+375292046444" class="number">+375 29 2046 444</a
+                ><a href="tel:+375292046444"
+                  ><img src="assets/logo/phone-logo.svg" alt="" /></a
+                ><a
+                  href="https://www.google.com/maps?q=г.+Барановичи,+Войкова+2"
+                  target="_blank"
+                  ><img src="assets/logo/map-logo.svg" alt=""
+                /></a>
               </div>
               <div class="titles_name">NEON</div>
               <div class="titles_sub">СТУДИЯ ЭСТЕТИКИ</div>
@@ -105,7 +135,7 @@
     </div>
     <section class="price">
       <div class="container">
-        <div class="price_list">
+        <div class="price_list" id="price">
           <div class="price_title">УСЛУГИ И ЦЕНЫ</div>
           <div class="price_permanent">
             <div class="title_permanent price_list_title">
@@ -151,7 +181,7 @@
       />
     </section>
     <section class="slider">
-      <div class="container slider_container">
+      <div class="container slider_container" id="example">
         <div class="slider_title">НАШИ РАБОТЫ</div>
         <div class="slider_wrapper">
           <div class="img_list">
@@ -256,7 +286,7 @@
       </div>
     </section>
     <section class="knowledge">
-      <div class="container">
+      <div class="container" id="knowledge">
         <img src="assets/розы.svg" alt="rose" class="knowledge_rose" />
         <div class="knowledge_title">ЧТО НУЖНО ЗНАТЬ</div>
         <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -452,7 +482,7 @@
       </div>
     </section>
     <section class="certificate">
-      <div class="container certificate_container">
+      <div class="container certificate_container" id="certification">
         <div class="title_certificate">СЕРТИФИКАТЫ</div>
         <div class="img_certificate">
           <img
@@ -473,15 +503,261 @@
         </div>
       </div>
     </section>
+    <section class="reviews">
+      <img
+        src="assets/reviews/leftлист.svg"
+        alt="золотая ветка"
+        class="left-twig"
+      />
+      <div class="container carousel-reviews" id="revive">
+        <div class="title_reviews">Отзывы</div>
+        <img
+          src="assets/reviews/text.svg"
+          alt="text - почитайте что нам пишут"
+          class="text-reviews"
+        />
+        <img
+          src="assets/reviews/phone.png"
+          alt="оболочка для слайда в виде телефона"
+          class="phone_wrapper"
+        />
+        <div class="carousel_phone">
+          <div class="carousel-wrapper">
+            <div class="carousel-slide active">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 2.png" alt="Review 1" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 3.png" alt="Review 2" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 1.png" alt="Review 3" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 3-1.png" alt="Review 3" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 3.png" alt="Review 3" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 4.png" alt="Review 3" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 5.png" alt="Review 5" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 7.png" alt="Review 7" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 8.png" alt="Review 8" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 9.png" alt="Review 9" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 10.png" alt="Review 10" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 11.png" alt="Review 11" />
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <div class="phone-frame">
+                <img src="assets/reviews/phone 12.png" alt="Review 12" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <!-- <button class="prev">‹</button>
+          <button class="next">›</button> -->
+          <button class="slide_button prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="slide_button next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="action">
+      <div class="container action_title" id="action">
+        СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ
+      </div>
+      <div class="action_pic">
+        <img
+          src="assets/action/machine.svg"
+          alt="tatoo machine"
+          class="action_img"
+        /><img
+          src="assets/action/banner.svg"
+          alt="10% discount every Monday"
+          class="banner"
+        /><img src="assets/action/hand.svg" alt="" class="action_img" />
+      </div>
+      <img src="assets/action/face.svg" alt="golden face" class="golden_face" />
+    </section>
+
+    <section class="about">
+      <div class="container" id="about">
+        <div class="about_title">О СТУДИИ</div>
+        <div class="about_us">
+          <div class="about_img">
+            <img src="assets/about/machine.svg" alt="" class="studio" />
+            <img src="assets/about/interier.svg" alt="" class="studio" />
+          </div>
+          <div class="about_img_hero">
+            <img src="assets/about/hero.svg" alt="" class="about_hero" />
+          </div>
+          <div class="about_content">
+            <ul class="about_list">
+              <li class="about_item">
+                Уютное и стильное пространство, где вы сможете насладиться
+                процедурой.
+              </li>
+              <li class="about_item">
+                Постоянное совершенствование навыков и знаний мастера, позволяет
+                быть в курсе всех новых техник в перманентном макияже и
+                татуировке.
+              </li>
+              <li class="about_item">
+                В работе используются только лучшие материалы и оборудование.
+              </li>
+              <li class="about_item">
+                Строго соблюдаются все стандарты по безопасности и гигиене.
+              </li>
+              <li class="about_item">
+                В студии проводятся бесплатные консультации.
+              </li>
+              <li class="about_item">
+                Профессионально исправим некачественный перманент или
+                татуировку.
+              </li>
+              <li class="about_item">
+                Мы гордимся своей репутацией и довольными клиентами.
+              </li>
+              <li class="about_item">
+                Наши положительные отзывы — это лучшее подтверждение качества
+                наших услуг.
+              </li>
+            </ul>
+            <a href="" class="about_number"
+              ><div class="about_link">
+                <p>Ждем ваших звонков!</p>
+                <p>+375 29 2046 444</p>
+              </div></a
+            >
+          </div>
+        </div>
+      </div>
+      <img src="assets/about/Group_rose.svg" alt="" class="about_rose" />
+    </section>
+    <section class="contact">
+      <div class="container" id="contact">
+        <div class="contact_title">Контакты</div>
+        <div class="contact_content">
+          <div class="contacts_logos">
+            <div class="contacts_input">
+              <a
+                href="https://www.google.com/maps?q=г.+Барановичи,+Войкова+2"
+                target="_blank"
+                class="icon"
+              >
+                <img
+                  src="assets/contacts/geo.svg"
+                  class="icon"
+                  alt="Геометка"
+                />
+              </a>
+              <div class="input_text">г.Барановичи, ул.Войкова, 2</div>
+              <!-- <input type="text" value="г.Барановичи, ул.Войкова, 2" readonly /> -->
+            </div>
+
+            <div class="contacts_input">
+              <a href="tel:+375292046444">
+                <img
+                  src="assets/contacts/phone.svg"
+                  class="contact_phone"
+                  alt="Звонок"
+                />
+              </a>
+              <div class="input_text text_phone">+375 29 2046444</div>
+
+              <a href="viber://chat?number=%2B375292046444">
+                <img
+                  src="assets/contacts/вайбер.svg"
+                  class="viber"
+                  alt="Viber"
+                />
+              </a>
+            </div>
+            <div class="contacts_input instagram_input">
+              <a href="https://www.instagram.com/neon_pmbar/">
+                <img
+                  src="assets/contacts/инста.svg"
+                  class="instagram"
+                  alt="instagram"
+                />
+              </a>
+              <div class="input_text text_phone">neon_pmbar</div>
+            </div>
+            <div class="insta">
+              <img src="assets/contacts/QC.svg" class="contact_inst" alt="" />
+            </div>
+          </div>
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18203.316638357755!2d26.006137962904006!3d53.130643994528995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d8cfe01bc453f9%3A0xbdbcd573c09a8d19!2z0YPQuy4g0JLQvtC50LrQvtCy0LAgMiwg0JHQsNGA0LDQvdC-0LLQuNGH0LgsINCR0YDQtdGB0YLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCAyMjU0MDksINCR0LXQu9Cw0YDRg9GB0Yw!5e1!3m2!1sru!2snl!4v1729667620279!5m2!1sru!2snl"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="container footer_container">
+        <p class="text">© Все права защищены</p>
+        <a href="#top" class="footer_link"
+          ><img src="assets/contacts/кнопка Вверх.svg" alt="Вверх"
+        /></a>
+      </div>
+    </section>
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
     <script
       src="https://kit.fontawesome.com/fcfe014eea.js"
       crossorigin="anonymous"
     ></script>
     <script src="scripts/script.js"></script>
+    <script src="scripts/reviews.js"></script>
+    <script src="scripts/burger.js"></script>
   </body>
 </html>
