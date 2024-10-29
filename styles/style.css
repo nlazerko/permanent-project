@@ -26,6 +26,10 @@ header {
   background-color: #e9e6e6;
 }
 
+.navbar {
+  padding: 0;
+}
+
 .burger-icon,
 .close-icon {
   width: 35px;
@@ -686,6 +690,7 @@ _________________________________About___________________________________ */
 .about {
   position: relative;
   top: -65%;
+  z-index: 2;
 }
 
 .about_title {
@@ -762,10 +767,15 @@ _________________________________About___________________________________ */
   top: 90%;
   right: 2%;
 }
+.about_number {
+  position: relative;
+  z-index: 2;
+}
 /* __________________________________Contact__________________________________ */
 .contact {
   position: relative;
   top: -41%;
+  z-index: 2;
 }
 
 .instagram {
@@ -1123,8 +1133,9 @@ _________________________________About___________________________________ */
 }
 
 @media (max-width: 769px) {
-  .container-fluid {
-    padding-left: 25px;
+  .price_title::before {
+    top: 80%;
+    left: 41%;
   }
   .price {
     background: url('../assets/price/Rectangle.svg') center center/cover
@@ -1311,7 +1322,25 @@ _________________________________About___________________________________ */
     top: 33%;
   }
 }
-
+@media (max-width: 431px) {
+  .input_text {
+    width: 278px;
+    font-size: 15px;
+  }
+  .viber {
+    left: 72%;
+  }
+  .action {
+    top: -52%;
+  }
+  .about {
+    top: -52%;
+  }
+  .footer_link {
+    bottom: 2%;
+    right: 10%;
+  }
+}
 @media (max-width: 426px) {
   .contact_content {
     gap: 15px;
