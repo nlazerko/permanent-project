@@ -1021,6 +1021,10 @@ _________________________________About___________________________________ */
   .about_img {
     display: none;
   }
+
+  .about {
+    top: -35%;
+  }
   .about_us {
     flex-wrap: nowrap;
     gap: 20px;
